@@ -8,6 +8,11 @@ import MusicScreen from '../screens/Music/MusicScreen';
 import ProfileScreen from '../screens/Profile/ProfileScreen';
 import SocialScreen from '../screens/Social/SocialScreen';
 
+//Alpha
+import AlphaExerciseScreen from '../screensAlpha/AlphaExercise/AlphaExerciseScreen';
+import AlphaMeScreen from '../screensAlpha/AlphaMe/AlphaMeScreen';
+import AlphaSocialsScreen from '../screensAlpha/AlphaSocials/AlphaSocialsScreen';
+
 
 const {width, height} = Dimensions.get("window")
 
@@ -27,10 +32,10 @@ const AppTab = () => {
                 }}
                 initialRouteName="Exercise"
         >
-            {/* Barnabas */}
+            {/* Alpha ONG KWANG WEE and ARRON */}
             <Tab.Screen 
-                name="MeScreen" 
-                component={ProfileScreen}
+                name="AlphaMeScreen" 
+                component={AlphaMeScreen}
                 options={{
                     tabBarIcon: ({focused}) => (
                         <View style={styles.tabIconContainer}>
@@ -45,15 +50,15 @@ const AppTab = () => {
                                 style = {{
                                     ...styles.tabIconText,
                                     color: focused ? '#7289DA' : '#BABBBF',
-                                }}>EXERCISE</Text>
+                                }}>ME</Text>
                         </View>
                     )
                 }}
             />
-            {/* Barnabas */}
+            {/* Alpha Barnabas and Omkar  */}
             <Tab.Screen 
-                name="Exercise2Screen" 
-                component={MusicScreen}
+                name="AlphaExerciseScreen" 
+                component={AlphaExerciseScreen}
                 options={{
                     tabBarIcon: ({focused}) => (
                         <View style={styles.tabIconContainer}>
@@ -68,15 +73,15 @@ const AppTab = () => {
                                 style = {{
                                     ...styles.tabIconText,
                                     color: focused ? '#7289DA' : '#BABBBF',
-                                }}>MUSIC</Text>
+                                }}>EXERCISE</Text>
                         </View>
                     )
                 }}
             />
-            {/* Barnabas */}
+            {/* Alpha WeiJian and YouXiang */}
             <Tab.Screen 
-                name="Social2Screen" 
-                component={SocialScreen}
+                name="AlphaSocialScreen" 
+                component={AlphaSocialsScreen}
                 options={{
                     tabBarIcon: ({focused}) => (
                         <View style={styles.tabIconContainer}>

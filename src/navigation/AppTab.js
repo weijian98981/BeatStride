@@ -27,6 +27,75 @@ const AppTab = () => {
                 }}
                 initialRouteName="Exercise"
         >
+            {/* Barnabas */}
+            <Tab.Screen 
+                name="MeScreen" 
+                component={ProfileScreen}
+                options={{
+                    tabBarIcon: ({focused}) => (
+                        <View style={styles.tabIconContainer}>
+                            <Image 
+                                source={require('../assets/icons/MeTab.png')}
+                                resizeMode= 'contain'
+                                style={{
+                                    ...styles.tabIconImage,
+                                    tintColor: focused ? '#7289DA' : '#BABBBF',
+                                }}/>
+                            <Text 
+                                style = {{
+                                    ...styles.tabIconText,
+                                    color: focused ? '#7289DA' : '#BABBBF',
+                                }}>EXERCISE</Text>
+                        </View>
+                    )
+                }}
+            />
+            {/* Barnabas */}
+            <Tab.Screen 
+                name="Exercise2Screen" 
+                component={MusicScreen}
+                options={{
+                    tabBarIcon: ({focused}) => (
+                        <View style={styles.tabIconContainer}>
+                            <Image 
+                                source={require('../assets/icons/ExerciseTab.png')}
+                                resizeMode= 'contain'
+                                style={{
+                                    ...styles.tabIconImage,
+                                    tintColor: focused ? '#7289DA' : '#BABBBF',
+                                }}/>
+                            <Text 
+                                style = {{
+                                    ...styles.tabIconText,
+                                    color: focused ? '#7289DA' : '#BABBBF',
+                                }}>MUSIC</Text>
+                        </View>
+                    )
+                }}
+            />
+            {/* Barnabas */}
+            <Tab.Screen 
+                name="Social2Screen" 
+                component={SocialScreen}
+                options={{
+                    tabBarIcon: ({focused}) => (
+                        <View style={styles.tabIconContainer}>
+                            <Image 
+                                source={require('../assets/icons/SocialsTab.png')}
+                                resizeMode= 'contain'
+                                style={{
+                                    ...styles.tabIconImage,
+                                    tintColor: focused ? '#7289DA' : '#BABBBF',
+                                }}/>
+                            <Text 
+                                style = {{
+                                    ...styles.tabIconText,
+                                    color: focused ? '#7289DA' : '#BABBBF',
+                                }}>SOCIAL</Text>
+                        </View>
+                    )
+                }}
+            />
             <Tab.Screen 
                 name="ExerciseScreen" 
                 component={ExerciseScreen}
@@ -71,6 +140,7 @@ const AppTab = () => {
                     )
                 }}
             />
+
             <Tab.Screen 
                 name="SocialScreen" 
                 component={SocialScreen}

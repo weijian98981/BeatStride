@@ -85,7 +85,7 @@ const LoginScreen = ({navigation}) => {
                   </View>
               </View>
 
-              <Text style={styles.subtitle}>Welcome Home!</Text>
+              <Text style={styles.subtitle}>Welcome Hobo!</Text>
 
               <TextInput
                   mode="outlined"

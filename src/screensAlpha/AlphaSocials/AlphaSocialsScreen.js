@@ -14,8 +14,8 @@ export default function App() {
       <Stack.Screen name="Distance" component={DistanceScreen} options={{ headerShown: false }}/>
       <Stack.Screen name="Speed" component={SpeedScreen} options={{ headerShown: false }}/>
       <Stack.Screen name="Activity" component={ActivityScreen} options={{ headerShown: false }}/>
-      <Stack.Screen name="Friend Requests" component={FriendReqScreen} />
-      <Stack.Screen name="Search Users" component={UserSearchScreen} />
+      <Stack.Screen name="Friend Requests" component={FriendReqScreen} options={{headerStyle: {backgroundColor: '#1E2124',height: height * 0.1,},headerTintColor: '#BABBBF',headerTitleStyle: {fontWeight: 'bold',}}} />
+      <Stack.Screen name="Search Users" component={UserSearchScreen} options={{headerStyle: {backgroundColor: '#1E2124',height: height * 0.1,},headerTintColor: '#BABBBF',headerTitleStyle: {fontWeight: 'bold',}}}/>
     </Stack.Navigator>
   );
 }
@@ -41,7 +41,7 @@ function DistanceScreen({ navigation }) {
                 </View>
             </View>
       <View style={styles.buttonbody}> 
-          <TouchableOpacity style={styles.button1} activeOpacity={0.8} onPress={() => navigation.navigate('Distance')}>
+          <TouchableOpacity style={styles.buttonActive} activeOpacity={0.8} onPress={() => navigation.navigate('Distance')}>
             <Text style={styles.buttonText}>Distance</Text>
           </TouchableOpacity> 
           <TouchableOpacity style={styles.button1} activeOpacity={0.8} onPress={() => navigation.navigate('Speed')}>
@@ -83,7 +83,7 @@ function SpeedScreen({ navigation }) {
           <TouchableOpacity style={styles.button1} activeOpacity={0.8} onPress={() => navigation.navigate('Distance')}>
             <Text style={styles.buttonText}>Distance</Text>
           </TouchableOpacity> 
-          <TouchableOpacity style={styles.button1} activeOpacity={0.8} onPress={() => navigation.navigate('Speed')}>
+          <TouchableOpacity style={styles.buttonActive} activeOpacity={0.8} onPress={() => navigation.navigate('Speed')}>
             <Text style={styles.buttonText}>Speed</Text>
           </TouchableOpacity> 
           <TouchableOpacity style={styles.button1} activeOpacity={0.8} onPress={() => navigation.navigate('Activity')}>
@@ -125,7 +125,7 @@ function ActivityScreen({ navigation }) {
           <TouchableOpacity style={styles.button1} activeOpacity={0.8} onPress={() => navigation.navigate('Speed')}>
             <Text style={styles.buttonText}>Speed</Text>
           </TouchableOpacity> 
-          <TouchableOpacity style={styles.button1} activeOpacity={0.8} onPress={() => navigation.navigate('Activity')}>
+          <TouchableOpacity style={styles.buttonActive} activeOpacity={0.8} onPress={() => navigation.navigate('Activity')}>
             <Text style={styles.buttonText}>Activity</Text>
           </TouchableOpacity> 
       </View>
@@ -194,6 +194,14 @@ iconContainer:{
     alignItems: 'center',
     paddingTop: 10,
     backgroundColor: '#393C41',
+    marginLeft:10,
+  },
+  buttonActive:{
+    width: 100,
+    height: 40,
+    alignItems: 'center',
+    paddingTop: 10,
+    backgroundColor: '#555a61',
     marginLeft:10,
   },
   content:{
